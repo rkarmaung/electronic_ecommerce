@@ -1,0 +1,375 @@
+/* section 1  starts */
+
+.sellSec1Container {
+    width: 100%;
+    margin-top: 51px;
+    overflow: hidden;
+}
+
+.sellSec1Img1 {
+    width: 110%; margin-top: -190px;
+}
+
+/* media query Welcome Image resize for WEB */
+
+@media only screen and (max-width: 1000px) {
+    .sellSec1Img1 {
+        margin-top: -70px;
+    }
+}
+
+.sellHeaderFont {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+/* section 1  ends */
+
+/* section 2 table starts */
+
+.sellSec2Wrapper {
+    margin-top: 20px;
+    width: 90%;
+    display: grid;
+}
+.sellpromotionHeaderC-1R-1{ width: 100%;}
+
+/* media query Table resize for Tablet & Windows */
+
+@media only screen and (min-width: 800px) {
+    .sellSec2Wrapper {
+        width: 80%;
+    }
+}
+
+.sellSec2Container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-gap: 10px;
+    background-color: grey;
+    padding-bottom: 15px;
+}
+
+.sellSec2Container article {
+    font-family: 'Cormorant Unicase';
+    font-weight: 800;
+}
+
+.headerRow1 {
+    background-color: #5ADD17;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    font-weight: 999;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.Col1, .Col2, .Col3 {
+    font-size: 1.2em;
+}
+
+.headerRowAll {
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.productImg1 {
+    width: 80%;
+    height: 100%;
+}
+
+.productImg2 {
+    width: 80%;
+    height: 90%;
+}
+
+.productImg3 {
+    width: 110%;
+    height: 100%;
+}
+
+.productImg4 {
+    width: 130%;
+    height: 200%;
+}
+
+.productImg5 {
+    width: 100%;
+    height: 100%;
+}
+
+.productImg6 {
+    width: 180%;
+    height: 150%;
+}
+
+.sellBtn {
+    border: 1px solid #222;
+    border-radius: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+/* media query sec2 table resize for MOBILE */
+
+@media only screen and (min-width: 800px) {
+    .headerRow1 {
+        height: 100px;
+    }
+    .headerRowAll {
+        height: 120px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .headerRow1 {
+        height: 100px;
+        font-size: 1.5em;
+    }
+    .headerRowAll {
+        height: 170px;
+        font-size: 1.5em;
+    }
+    .sellBtn {
+        font-size: 1em;
+    }
+}
+
+/* MODAL starts */
+
+.modalOverlay {
+    position: fixed;
+    z-index: 8;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.81);
+    overflow-Y: scroll;
+    transform: translateX(-250%);
+    transition: all ease 500ms;
+}
+
+/* Memory MODAL starts */
+
+.modal {
+    position: absolute; top: 0;
+    width: 350px;
+    padding: 5px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
+    overflow-Y: scroll;
+}
+
+.memory {
+    transform: translateX(-250%);
+    transition: all ease 500ms;
+}
+
+.modalHeader {
+    border-bottom: 1px solid grey;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+.modalTitleRight {
+    color: #666;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.modalBody {
+    width: 100%;
+}
+
+.modalImgContainer {
+    width: 150px;
+    height: 150px;
+    background-color: grey;
+}
+
+.modalImg {
+    width: 100%;
+    height: 95%;
+}
+
+.modalImgNote4 {
+    width: 90%;
+    height: 90%;
+}
+
+.modalImgCaption {
+    font-size: 25px;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.modalOption {
+    margin-bottom: 30px;
+}
+
+.modalOption>select {
+    width: 200px;
+    height: 30px;
+    font-size: 20px;
+}
+
+.modalFooter {
+    border-top: 1px solid grey;
+    width: 100%;
+}
+
+.nextBtn, input[type=submit] {
+    font-size: 19px;
+    padding: 5px 10px;
+    margin-top: 10px;
+    background-color: orange;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+/* Memory MODAL ends */
+
+/* Condition MODAL starts */
+
+.conditionGood, .conditionAverage, .conditionBelowAverage, .conditionPoor {
+    display: grid;
+    justify-items: left;
+    text-align: left;
+    padding: 5px;
+    background-color: #EFEEEC;
+    border: 1px solid lightblue;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.conditionRadio input[type=radio] {
+    display: none;
+}
+
+.conditionRadio input[type=radio]:checked~.conditionGood, .conditionRadio input[type=radio]:checked~.conditionAverage, .conditionRadio input[type=radio]:checked~.conditionBelowAverage, .conditionRadio input[type=radio]:checked~.conditionPoor {
+    background-color: lightblue;
+    color: #f2f2f2;
+}
+
+.conditionGood:hover, .conditionAverage:hover, .conditionBelowAverage:hover, .conditionPoor:hover {
+    background-color: lightblue;
+    color: #f2f2f2;
+}
+
+/* submit starts */
+
+.sellSubmit {
+    width: 350px;
+    margin-top: 300px;
+    padding: 5px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
+    position: absolute;
+    z-index: 3;
+    transform: translateX(-250%);
+    transition: all ease 500ms;
+}
+
+/* media query Modal resize for WEB */
+
+@media only screen and (min-width: 900px) {
+    .memory {
+        width: 500px;
+    }
+    .sellSubmit {
+        width: 500px;
+    }
+}
+
+.submitForm>input[type=text], input[type=mail],textarea {
+    width: 250px;
+    height: 30px;
+    font-size: 20px;
+    font-family: 'Cormorant Unicase';
+    padding: 3px;
+    margin-top: 15px;
+    background-color: white;
+}
+
+.submitForm>input[type=date], .submitForm>input[type=time] {
+    display: flex;
+    color: #666;
+    width: 250px;
+    height: 30px;
+    font-size: 20px;
+    font-family: 'Cormorant Unicase';
+    padding: 3px;
+    margin-top: 15px;
+}
+
+.submitForm>label {
+    font-size: 12px;
+}
+
+.submitForm>label>textarea {
+    height: 180px;
+    font: 10px;
+    margin-top: 2px;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+}
+
+/* submit ends */
+
+/* Condition MODAL ends */
+
+/* MODAL ends */
+
+/* section 2 table ends */
+
+/*Thank you MODAL after press submit btn STARTS*/
+.aboutUsOverlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    overflow-Y: hidden;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+}
+
+.aboutUsModal {
+    width: 350px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    font-family: 'Cormorant Unicase';
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.submitForm>labe, .contactUsSubmitBtn {
+    font-family: 'Cormorant Unicase';
+}
+/*Thank you MODAL after press submit btn ENDS*/

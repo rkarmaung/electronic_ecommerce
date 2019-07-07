@@ -1,0 +1,71 @@
+/* login starts */
+body{
+    font-family: 'Cormorant Unicase'; 
+}
+.registerOverlay{
+    width: 375px;height: 650px;
+    background-color: #777;
+    margin-top: 81px;
+    border-radius: 20px;
+}
+.registerBg{
+    width: 370px;
+    height: 625px;
+    background-color: lightblue;
+    border-radius: 20px;
+}
+.register{
+    width: 350px;
+    height: 600px;
+    background-color: #f2f2f2;
+    
+    display: grid;
+    grid-template-rows: 1fr 12fr;
+}
+.registerSec1{
+	border-bottom: 2px solid #999;
+}
+.registerTitle{
+    padding: 0 35px;
+}
+form{
+    padding: 20px;
+}
+label{
+    font-size: 20px;
+}
+input[type=text],
+[type=password] {
+    width: 250px; height: 35px; font-size: 25px;
+}
+
+.registerBtn{
+    width: 250px;
+    height: 45px;
+    font-size: 25px;
+    color: #f2f2f2; 
+    background-color: navy;
+    border: 1px solid orange;
+    margin-top: 35px;
+    font-family: 'Cormorant Unicase'; 
+    cursor: pointer;
+}
+.termsNconditions{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width: 100%;
+    margin-top: 5px;
+}
+.termsNconditions > label {font-size: 16px;}
+.registerNow{
+    margin-top: 20px;
+    color: #999;
+    letter-spacing: 2px;
+    
+    display: flex;
+    text-align: center;
+    justify-content: center; 
+    align-items: center;
+}
+/* register ends */

@@ -1,0 +1,319 @@
+/* (Buy-Page) welcome page starts */
+.welcomePgContainer{
+  margin-top: 80px;
+  width: 100%; overflow: hidden;
+  
+  -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+  box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+  
+}
+
+.welcomeImg{
+  width: 100%; margin-top: -100px;
+}
+/* Welcome Img resize Media query for Mobile*/
+@media only screen and (max-width: 800px) {
+    .welcomeImg {
+        width: 150%;
+    }
+}
+/* welcome page ends */
+
+/* promotion starts */
+.promotionContainer{
+width: 100%;
+background-color: #E5E4E2; 
+margin-top: 81px;
+padding: 5px;
+
+-webkit-box-shadow: inset 0px 10px 27px -8px #141414, inset 0px -2px 27px -15px #A31925, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: inset 0px 10px 27px -8px #141414, inset 0px -2px 27px -15px #A31925, 5px 5px 15px 5px rgba(0,0,0,0);
+
+}
+.buyPromotionContainer{margin-top: 30px;}
+.promotionHeaderContainer{
+width: 100%;
+display: grid;
+grid-template-columns: 4fr 2fr;
+justify-items: left;
+align-items: left;
+}
+.promotionHeaderC-1R-1{
+  width: 100%;
+display: grid;
+  justify-items: left;
+  padding: 20px;
+}
+.promotionHeaderC-1R-1 >h1{
+  color: #DC381F;
+}
+.promotionHeaderC-1R-2{
+  display: grid;
+  justify-items: right;
+  width: 100%;
+  padding: 20px;
+}
+.promotionHeaderC-1R-2 > a{
+  color: #888;
+  font-weight: 800;
+  cursor: pointer;
+}
+.promotionImgContainer{
+  width: 100%;
+  
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+grid-row-gap: 40px;
+grid-column-gap: 20px;
+}
+  .promotionImgContainer>a{
+      text-decoration: none;
+      color: #707070;
+  }
+.promotionCard{
+  width: 180px;
+  background-color: white;
+  border-radius: 10px;
+font-family: 'Lobster Two'; 
+
+-webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+
+}
+
+
+.promotionCardHeader{
+  background-color: #f2f2f2;
+  border-radius: 10px 10px 0 0;
+  width: 100%;
+  height: 45px;
+  font-family: 'Lobster Two'; 
+  font-size: 20px;
+  position: relative;
+
+-webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+
+}
+.promotionCardBody{
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+}
+    .promotionImg1{
+        width: 80%;
+        height: 100%;
+    }
+    .promotionImg2{
+        width: 95%;
+        height: 90%;
+    }
+    .promotionImg3{
+        width: 120%;
+        height: 100%;
+    }
+    .promotionImg4{
+        width: 85%;
+        height: 100%;
+    }
+    .promotionImg5{
+        width: 45%;
+        height: 85%;
+    }
+    .promotionImg6{
+        width: 55%;
+        height: 85%;
+    }
+    .promotionImg7{
+        width: 125%;
+        height: 100%;
+    }
+    .promotionImg8{
+        width: 100%;
+        height: 100%;
+    }
+    .promotionImg9{
+        width: 120%;
+        height: 180%;
+    }
+    .promotionImg10{
+        width: 100%;
+        height: 100%;
+    }
+
+.promotionCardFooter{
+  background-color: #f2f2f2;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 10px 10px;
+}
+.promotionCardFooter>.priceFont{
+  font-size: 20px;
+  display: flex;
+}
+.promotionCardFooter>.priceFont>del{
+  font-size: 15px;
+  display: flex;
+}
+
+/* See All btn starts */
+.seeAll{
+border-radius: 30%;
+padding: 10px;
+margin: 30px 0;
+
+-webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+
+}
+.seeAll a{
+  font-size: 20px;
+  font-weight: 900;
+  color: orange;
+}
+/* See All btn ends */
+/* promotion ends */
+
+
+
+
+/* phones section starts */
+.sectionGap{
+  margin-top: 50px;
+
+-webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+
+}
+    .phonesImg1{
+        width: 80%;
+        height: 100%;
+    }
+    .phonesImg2{
+        width: 95%;
+        height: 90%;
+    }
+    .phonesImg3{
+        width: 100%;
+        height: 100%;
+    }
+    .phonesImg4{
+        width: 85%;
+        height: 100%;
+    }
+    .phonesImg5{
+        width: 45%;
+        height: 85%;
+    }
+    .phonesImg6{
+        width: 55%;
+        height: 90%;
+    }
+    .phonesImg7{
+        width: 130%;
+        height: 100%;
+    }
+    .phonesImg8{
+        width: 100%;
+        height: 170%;
+    }
+    .phonesImg9{
+        width: 200%;
+        height: 120%; padding-left: 80px;
+    }
+    .phonesImg10{
+        width: 80%;
+        height: 100%;
+    }
+
+/* phones section ends */
+
+
+/* Macbooks section starts */
+    .macbooksImg1{
+        width: 100%;
+        height: 170%;
+    }
+    .macbooksImg2{
+        width: 150%;
+        height: 80%;
+    }
+    .macbooksImg3{
+        width: 100%;
+        height: 100%;
+    }
+    .macbooksImg4{
+        width: 120%;
+        height: 100%;
+    }
+    .macbooksImg5{
+        width: 100%;
+        height: 170%;
+    }
+    .macbooksImg6{
+        width: 170%;
+        height: 140%;
+    }
+    .macbooksImg7{
+        width: 150%;
+        height: 80%;
+    }
+    .macbooksImg8{
+        width: 120%;
+        height: 100%;
+    }
+    .macbooksImg9{
+        width: 170%;
+        height: 140%;
+    }
+    .macbooksImg10{
+        width: 100%;
+        height: 100%;
+    }
+/* Macbooks section ends */
+
+
+/* watches section starts */
+    .iwatchesImg1{
+        width: 125%;
+        height: 100%;
+    }
+    .iwatchesImg2{
+        width: 95%;
+        height: 100%;
+    }
+    .iwatchesImg3{
+        width: 100%;
+        height: 65%;
+    }
+    .iwatchesImg4{
+        width: 100%;
+        height: 100%;
+    }
+    .iwatchesImg5{
+        width: 160%;
+        height: 130%;
+    }
+    .iwatchesImg6{
+        width: 100%;
+        height: 100%;
+    }
+    .iwatchesImg7{
+        width: 125%;
+        height: 100%;
+    }
+    .iwatchesImg8{
+        width: 100%;
+        height: 65%;
+    }
+    .iwatchesImg9{
+        width: 95%;
+        height: 100%;
+    }
+    .iwatchesImg10{
+        width: 160%;
+        height: 130%;
+    }
+
+/* iwatches section ends */
+/* (Buy-Page) welcome page ends */

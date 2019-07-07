@@ -1,0 +1,210 @@
+.sec1AboutUsP1 {
+    width: 100%;
+    margin-top: 71px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    position: relative;
+}
+
+.sec1AboutUsP1Img {
+    width: 100%;
+}
+
+.sec1AboutUsP1Img1 {
+    width: 100%;
+    display: none;
+}
+
+.sec1AboutUsAddress {
+    width: 400px;
+    height: 215px;
+    position: absolute;
+    top: 16%;
+    left: 19%;
+}
+
+.sec1AboutUsAddress article {
+    font-family: 'Cormorant Unicase';
+    color: #555;
+    display: grid;
+    justify-items: left;
+}
+
+.sec1AboutUsAddressHeader {
+    font-weight: 600;
+    font-size: 1.5em;
+    width: 100%;
+}
+
+.sec1AboutUsAddressBody {width: 100%;}
+
+.sec1AboutUsAddressBody span {
+    display: grid;
+    justify-items: left;
+    text-align: left;
+}
+
+/* media query Welcome image resize for WINDOW view */
+@media only screen and (max-width: 350px) {
+    .sec1AboutUsAddress {
+        width: 300px;
+        height: 150px;
+        position: absolute;
+        top: 20%;
+        left: 18%;
+    }
+}
+
+@media only screen and (min-width: 830px) {
+    .sec1AboutUsP1Img {
+        display: none;
+    }
+    .sec1AboutUsP1Img1 {
+        display: grid;
+    }
+    .sec1AboutUsAddress {
+        width: 400px;
+        height: 250px;
+        position: absolute;
+        top: 35%;
+        left: 20%;
+    }
+}
+
+@media only screen and (min-width: 1390px) {
+    .sec1AboutUsP1Img1 {
+        width: 90%;
+    }
+    .sec1AboutUsP1 {
+        background-color: #403835;
+    }
+    .sec1AboutUsAddress {
+        width: 400px;
+        height: 250px;
+        position: absolute;
+        top: 37%;
+        left: 22%;
+    }
+}
+
+.sec1AboutUsP2 {
+    width: 100%;
+    padding: 30px;
+    line-height: 30px;
+    color: #f2f2f2;
+    background-color: #333;
+    border: 1px solid grey;
+}
+
+.sec2AboutUs {
+    width: 90%;
+    background-color: #f2f2f2;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-gap: 10px;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.aboutUsBoxA, .aboutUsBox1, .aboutUsBox3 {
+    width: 320px;
+    margin: 20px 0;
+    background-color: #3F3439;
+    border-radius: 20px;
+    padding: 20px;
+    font-family: 'Cormorant Unicase';
+    color: white;
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+/* media query ABOUT US: reposition for Window View */
+
+@media only screen and (min-width: 1000px) {
+    .aboutUsBoxA {
+        position: absolute;
+        top: 81px;
+        right: 30px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .aboutUsBoxA {
+        position: absolute;
+        top: 81px;
+        right: 100px;
+    }
+    @media only screen and (min-width: 1300px) {
+        .aboutUsBoxA {
+            position: absolute;
+            top: 110px;
+            right: 100px;
+        }
+    }
+    @media only screen and (min-width: 1390px) {
+        .aboutUsBoxA {
+            position: absolute;
+            top: 120px;
+            right: 180px;
+        }
+    }
+}
+
+.aboutUsBox2 {
+    width: 320px;
+    margin: 20px 0;
+    background-color: #f2f2f2;
+}
+
+.aboutUsBox3 {
+    width: 290px;
+    height: 350px;
+    padding: 30px;
+}
+
+.aboutUsBox1Header {
+    width: 100%;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 1.5em;
+}
+
+.aboutUsBox1Body {
+    padding: 10px;
+    text-align: left;
+}
+
+.aboutUsBox2>.aboutUsBox1Header {
+    color: black;
+    font-family: 'Cormorant Unicase';
+}
+
+.followUsFooter {
+    margin: 20px;
+}
+
+.aboutUsOverlay {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+}
+
+.aboutUsModal {
+    width: 350px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    font-family: 'Cormorant Unicase';
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.submitForm>label, .contactUsSubmitBtn {
+    font-family: 'Cormorant Unicase';
+}

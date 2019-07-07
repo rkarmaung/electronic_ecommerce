@@ -1,0 +1,137 @@
+.promotionContainer{
+    margin-top: 81px;
+    width: 90%
+}
+
+.shoppingCartHeader{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    width: 100%;
+}
+
+.tableBackground{ 
+    background-color: grey; 
+    width: 100%; padding: 5px 0; 
+    box-sizing: border-box; 
+}
+
+.shoppingCartHeader article{
+    font-family: 'Cormorant Unicase'; 
+    width: 100%;
+}
+
+.productImageNdetail{
+    width: 200px; height: 100px; 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+}
+
+.headerRowAll{
+    height: 120px; 
+    font-weight: 700;
+    padding: 5px;
+}
+
+.qtyBox{
+    border: 1px solid #444;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+i{
+    border: solid #444;
+    border-width: 0 3px 3px 0; 
+    display: inline-block;
+    padding: 4px;
+}
+
+.upArrow{
+    cursor: pointer;
+    width: 25px;
+    height: 23px;
+}
+
+.downArrow{
+    cursor: pointer;
+    width: 25px;
+    height: 23px;
+}
+
+.up{transform: rotate(-135deg); -webkit-transform: rotate(-135deg);}
+.down{transform: rotate(45deg); -webkit-transform: rotate(45deg);}
+
+.shoppingCartItemContainer{
+
+    height: 100px;
+    overflow: hidden;
+}
+
+			.shoppingCartItem1{
+			    width: 100px;
+			    height: 100%;
+			}
+			.shoppingCartItem2{
+			    width: 110px;
+			    height: 100px;
+			}
+			.shoppingCartItem3{
+			    width: 110px;
+			    height: 100%;
+            }
+            
+
+/* media query table resize for Window View */
+@media only screen and (min-width: 800px){
+    .promotionContainer{width: 60%;}
+    .qtyCounter{font-size: 1.4em;}
+}
+@media only screen and (min-width: 1200px){
+    .promotionContainer{width: 50%;}
+}
+
+.shoppingCartDetail>span{
+    display: grid; justify-items: left; align-items: left; text-align: left;
+    font-weight: 500; font-size: 14px;
+}
+
+/* Sub Total starts */
+.subTotalContainer{
+    margin-top: 5px; width: 100%;
+    display: flex; justify-content: flex-end; 
+}
+
+.subTotalCol1,
+.subTotalCol2{
+    height: 50px; width: 80px; padding: 3px;
+    margin-left: 5px;
+    font-family: 'Cormorant Unicase'; 
+    font-size: 15px;
+}
+
+.subTotalCol1{line-height: 15px;}
+/* Sub Total ends */
+
+/* ContinueBtn PaymentBtn Starts */
+.continueBtnContainer{
+    margin: 5px 0; width: 100%;
+    display: flex; justify-content: flex-end; 
+}
+
+.subTotalCol3,
+.subTotalCol4{
+    height: 50px;width: 125px;
+    border-radius: 7px;
+    margin-left: 5px;
+    font-family: 'Cormorant Unicase'; 
+    font-size: 18px;
+}
+.tableComplete{width: 95%}
+
+.subTotalCol4{
+    background-color: green;
+    color: #f2f2f2; 
+}
+
+.notes{font-size: .9em; color: white; font-family: 'Cormorant Unicase'; line-height: 12px;}
+/* ContinueBtn PaymentBtn ends */

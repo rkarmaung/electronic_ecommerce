@@ -1,0 +1,88 @@
+/* 
+Large display image = 390px x 400px
+Small image in boxes = 100px x 100px
+*/
+
+/* more info - phone item-1*/
+.itemOverlay{
+    background-color: lightblue;
+    width: 400px;
+    height: 1010px;
+}
+.itemBg{
+    background-color: #f2f2f2;
+    width: 390px;
+    border-radius: 10px;
+}
+.itemHeader{
+    width: 100%;
+    height: 70px;
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    border-bottom: 1px solid lightblue; 
+}
+.itemHeader-text{
+    padding-left: 40px;
+}
+.itemDisplayL{
+    width: 100%;
+    height: 400px;
+    width: 390px;
+    
+    background-image: url(../pics/sgmobile5.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 300px 350px;
+}
+.itemDisplaySm{
+border-top: 1px solid lightblue;
+border-bottom: 1px solid lightblue;
+    width: 98%;
+    height: 170px;
+    
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+.itemDisplaySm1{
+background-color: #f2f2f2;
+    width: 120px;
+    height: 130px;
+}
+.itemCaptionHeader{
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box; 
+    margin-bottom: 30px;
+}
+.itemCaption{
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+.itemCaptionList{
+    width: 100%;
+}
+.itemCaptionList ul{
+    line-height: 30px;
+    display: grid;
+    justify-items: left;
+    text-align: left;
+    width: 350px;
+    padding: 0 0 30px 20px;;
+}
+.itemDisplaySmImage{
+    height: 100px;
+    width: 100px;
+}
+.addToCart{
+    width: 120px;
+    height: 50px;
+    background-color: navy;
+    border-radius: 10px;
+    
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+.addToCart a{
+    font-size: 15px;
+    color: white;
+}

@@ -1,0 +1,670 @@
+*, body{
+	display: grid; justify-items: center; align-items: center; text-align: center;
+    margin:0; padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Cormorant Unicase'; 
+}
+
+body a {text-decoration: none; color: black;}
+
+@font-face{ 
+font-family: 'Cormorant Unicase'; 
+src: url(../font/CormorantUnicase-Regular.ttf);
+}
+
+@font-face{ 
+font-family: 'Lobster Two'; 
+src: url(../font/LobsterTwo-Regular.ttf);
+}
+
+/* Fonts style starts*/
+h1{ font-size: 1.5em; color: #EFEEEC; font-weight: 900; text-shadow: 2px 2px 2px #56B3CE; }
+h2{ font-size: 20px; color: #EFEEEC; font-weight: 400; text-shadow: 2px 2px 2px #56B3CE; }
+h3{ font-size: 28px; color: #444444; margin: 0; padding: 0; 
+    text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC; }
+h4{ font-size: 20px; color: #444444; margin: 0; padding: 0;
+    text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC; }
+.captionFont{ color: #333; font-weight: 500; font-size: 15px; }
+.priceFont{ color: red; font-weight: 600; font-size: 25px; margin-top: 10px; }
+/* Fonts style ends */
+
+/* navbar for MOBILE starts */
+nav{
+    position: fixed; top: 0; left: 0; z-index: 8;
+    width: 100%; height: 80px; background-color: #f2f2f2; /*rgba (0.1,0.1,0.1,0.6);*/
+    border-bottom: 1px solid lightblue;
+    display: grid; align-items: center; justify-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    
+    display: none;
+}
+
+/* burger btn on navbar starts*/
+.burgerContainer{
+    height: 80px; width: 80px;
+    display: flex; flex-direction: column; align-items: left;justify-content: center;
+    position: relative; cursor: pointer;
+}
+.burger1,
+.burger2,
+.burger3
+{
+    width: 30px; height: 4px; background-color: #888;
+    margin: 4px 0 0 0px;
+    border-radius: 10px;
+    display: grid; justify-items: left; align-items: center;
+    transition: 1000ms all ease;
+}
+/* burger btn on navbar ends*/
+
+/* burger content starts */
+.burgerContentContainer{
+    display: block;
+    position: absolute; top: 81px; left: 0px;
+    
+    background-color: #f2f2f2;
+    font-size: 18px;
+    border-radius: 0 10px 10px 0;
+    
+    transform: rotateY(180deg);
+    transform-origin: top left;
+
+    width: 400px;
+    overflow-y: auto;
+-webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 43px 15px -9px rgba(0,0,0,0); 
+box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 5px 43px 15px -9px rgba(0,0,0,0);
+}
+.burgerContentWrapper{
+    width: 100%; 
+    opacity: 0; 
+    margin-top: 20px;
+    display: grid; 
+    justify-items: left;
+    align-items: left;
+    text-align: left;=
+    overflow-y: scroll;
+}
+.burgerContent{
+    width: 100%;
+    font-weight: 600;
+    font-size: 19px;
+    display: block;
+    text-align: left;
+}
+    .burgerContent a:hover,
+    .products:hover{ background-color: #0E6590; color: #f2f2f2;}
+.registerClick,
+.products,
+.followUs{
+    padding: 15px 0 15px 50px;
+}
+
+.burgerContent > a{
+    width: 95%;
+    color: black;
+    font-weight: 600;font-size: 19px;
+    text-decoration: none;
+	display: block;
+	text-align: left;
+    padding: 15px 0 15px 50px;
+    cursor: pointer;
+}
+
+.productContent{
+    display: none;
+	width: 90%;
+    text-align: left;
+    border: 3px dotted grey; border-radius: 10px;
+    margin-top: 10px;
+}
+.productContent li{width: 100%;}
+.productContent a{
+    padding: 15px 0 25px 35px; width: 100%;
+    display: grid; justify-items: left; align-items: left;
+}
+.products:hover .productContent{display: grid; color: white;}
+.socialMediaIcon{
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+}
+.socialMedia{
+    display: flex; 
+    padding: 0 0 35px 35px;
+}
+.socialMedia img:hover {
+    transform: scale(1.2, 1.2); /* Standard syntax */
+    -ms-transform: scale(1.2, 1.2); /* IE 9 */
+    -webkit-transform: scale(1.2, 1.2); /* Safari prior 9.0 */
+}
+/* burger content ends */
+
+/* logo & slogan starts */
+.logo{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.logoText{
+    font-weight: 900;
+    font-size: 16px;
+    padding-left: 3px;
+}
+.slogan{
+    padding-left: 3px;
+    font-size: 8px;
+}
+.logoIcon{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	
+}
+/* logo & slogan starts */
+
+/* search MOBILE starts */
+.searchIcon{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: center;
+    
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    
+}
+.searchShoppingCart{
+    height: 80px;
+    width: 80px;
+    
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	align-items: center;
+	justify-items: right;
+	grid-gap: 10px;
+}
+.shoppingCartContainer{
+    display: flex;
+}
+.shoppingCartIndex{
+    color: red;
+    font-weight: bold;
+    padding: 2px;
+    border-radius: 50%;
+    
+    opacity: 0;
+}
+.searchContainer{
+    display: relative; cursor: pointer;
+}
+.searchBox{
+    position: absolute; top:0px; left: 0px;
+    border-radius: 20px; border: 0px solid transparent;
+    background-color: #f2f2f2;
+    width: 210px; height: 35px; padding: 5px;
+    font-size: 20px; font-family: 'Cormorant Unicase'; opacity: 0;
+}
+.searchPopUp{
+    position: absolute; top: 81px; right: 100px;
+    width: 250px; height: 35px; padding: 5px;
+    border-radius: 20px; background-color: #f2f2f2;
+
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+
+    transition: 1000ms all ease; opacity: 0;
+}
+.searchIcon1{
+    position: absolute; top: 3px; right: 10px;
+    width: 30px;
+    cursor: pointer;
+    opacity: 1;
+}
+/* search MOBILE ends */
+/* navbar For MOBILE ends */
+
+
+/* navbar For WINDOW starts */
+.navbarContainer{
+    position: absolute; top: 0; left: 0; z-index: 2;
+    width: 100%; height: 80px; background-color: #f2f2f2;
+    font-family: 'Cormorant Unicase'; font-weight: 900;
+    display: grid;grid-template-columns: 1fr 3fr 1fr;
+     
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    
+}
+
+.navbarLogoContainer{ width: 150px; }
+.navbarMidSecContainer{
+    display: grid; grid-template-columns: repeat(7, 1fr);
+    width: 100%; height: 100%;
+}
+
+.navProductContainer{
+    position: relative; z-index: 2;
+    width: 100%; height: 100%;
+    cursor: pointer;
+}
+
+.navProductDropdown{
+    position: absolute; top: 79px; left: 0;
+    padding: 10px; width: 200px;
+    background-color: #f2f2f2;
+    display: grid; justify-items: left; align-items: left;
+    cursor: pointer;
+
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    
+    display: none;
+}
+
+.navProductDropdown li{padding: 20px;}
+
+.navProductDropdown a {
+    width: 100%; font-size: 0.2em;
+    display: grid; justify-items: left;
+}
+
+.navProductContainer:hover .navProductDropdown{ display: grid; }
+
+.navbarLoginContainer,
+.navbarRegisterContainer,
+.navbarContactUsContainer,
+.navbarHomeContainer,
+.navbarBuyContainer,
+.navbarSellContainer{
+    width: 90px; height: 81px;
+}
+.navProductContainer:hover,
+.navbarLoginContainer:hover,
+.navbarRegisterContainer:hover,
+.navbarContactUsContainer:hover,
+.navbarHomeContainer:hover,
+.navbarBuyContainer:hover,
+.navbarSellContainer:hover,
+.navProductDropdown a:hover{ 
+    color: #f2f2f2;
+    background-color: #0E6590; 
+}
+
+.webSearchIcon{ 
+    cursor: pointer; 
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: center;
+    
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    
+}
+.webSearchContainer{ position: relative; }
+.webSearchBoxContainer{
+    position: absolute; top: 60px; left: -250px; z-index: 2;
+    background-color: #f2f2f2;
+    overflow: hidden;
+    width: 300px; height: 60px;
+    border-radius: 30px;
+    transition: all ease 1000ms;
+    opacity: 0;
+     
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    
+}
+.websearchBox{
+    position: absolute; top: 18px; left: 10px;
+    letter-spacing: 5px; font-size: 1.2em; font-weight: 400px;
+    border: 0px solid; background-color: #f2f2f2; width: 200px;
+    display: grid; justify-items: left; align-items: left; text-align: left; border-radius: 20px;
+    font-family: 'Cormorant Unicase'; 
+}
+.webSearchIconBtn{
+    width: 40px; height: 40px; border-radius: 50%;
+    position: absolute; top: 10px; right: 10px; cursor: pointer;
+}
+/* navbar For WINDOW ends */
+
+/* media query Navbar switch Starts */
+@media only screen and (max-width: 1000px) and (max-width: 2560px){
+    .navbarContainer{
+        display: none;
+    }
+    nav{
+        display: grid;
+    }
+}
+/* media query Navbar switch Ends */
+
+
+/* Section 1 starts */
+.indexSec1{ 
+    position: relative; z-index: 1;
+    width: 100%; margin-top: 81px; 
+}
+
+.indexSec1-Img{ width: 100%; }
+
+.buySec{ 
+    width: 50%; height: 35%; 
+    position: absolute; top: 0; left: 25%;
+    cursor: pointer;
+}
+
+.sellSec{ 
+    width: 50%; height: 50%; 
+    position: absolute; top: 47%; left: 35%; 
+    cursor: pointer;
+}
+/* Section 1 ends */
+
+
+/* Section 2 starts */
+.indexSec2{ 
+    position: relative; z-index: 0;
+    margin-top: -20px; width: 100%;
+    overflow: hidden;
+     
+     -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+     box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+
+}
+
+.indexSec2Img{ width:110%; }
+
+.buySecOnsec2Img{ 
+    position: absolute; top: 2%; left: 0;
+    width: 100%; height: 50%; 
+    cursor: pointer;
+}
+/* Section 2 ends */
+
+/* Section-2A starts */
+.indexSec2aContainer{
+	width: 100%; margin-top: -20%; padding-bottom: 20px;
+	 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    grid-row-gap: 40px;
+    
+    position: relative; top: 0; left: 0;
+}
+
+.indexSec2aPromotionContainer{ 
+    width: 270px;
+    height: 400px;
+    background-color: white;
+    border-radius: 10px;
+    font-family: 'Lobster Two'; 
+    overflow: hidden;
+
+    display: grid;
+    grid-template-rows: 20% 80%;
+    
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    
+}
+.indexSec2aPromotionContainerHeader{
+    width: 100%; height: 100%;
+    font-size: 2em; background-color: #d5d5d5;
+    position: relative; 
+   
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    
+}
+
+.indexSec2aPromotionContainerBody{
+   width: 100%; height: 100%;
+}
+
+			.indexSec2aImg1{
+			   width: 100%;
+			   height: 50%;
+			}
+			.indexSec2aImg2{
+			   width: 100%;
+			   height: 100%;
+			   border-radius: 0 0 10px 10px;
+			}
+			.indexSec2aImg3{
+			   width: 140%;
+			   height: 100%;
+			}
+			.indexSec2aImg4{
+			   width: 175%;
+			   height: 100%;
+			}
+/* Section-2A ends */
+
+/* Media Query (INDEX) Section-1 Buy/Sell image adjustment starts */
+@media only screen and (min-width: 1000px) and (max-width: 1300px){
+    /* Section-1 Buy/Sell image adjustment starts */
+    .indexSec1-Img{ display: none;}
+    .indexSec1-ImgContainer{
+        width: 100%; height: 600px;
+        margin-top: -50px;
+        overflow: hidden;
+        border: 1px solid red;
+    }
+    .indexSec1{
+        width: 100%;
+        background-image: url(../pics/sgmobile15a.png);
+        background-size: 101%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+@media only screen and (min-width: 1300px){
+    .indexSec1-Img{ display: none;}
+    .indexSec1-ImgContainer{
+        width: 100%; height: 650px;
+        
+    }
+    .indexSec1{
+        background-image: url(../pics/sgmobile15a.png);
+        background-size: 101%;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}/* Media Query (INDEX) Section-1 Buy/Sell image adjustment ends */
+
+/* Section-3 starts */
+.indexSec3{
+    width: 100%; margin-top: 10px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    background-color: #353535;
+
+	-webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+
+}
+
+.indexSec3P1{width: 100%;}
+
+    .indexSec3Img{width: 100%;}
+
+.indexSec3P2{
+    width: 100%; padding: 30px; margin-top: 30px;
+    color: #f2f2f2; font-family: 'Cormorant Unicase';
+    background-color: #353535;
+    border-radius: 10px;
+}
+
+.indexSec3P2 article{
+    display: grid; justify-items: left; align-items: left; text-align: left;
+}
+
+.indexSec3P2Header{
+    border-bottom: 1px solid #f2f2f2; 
+    width: 100%; padding-bottom: 10px;
+    font-size: 2em;
+}
+
+.indexSec3P2Body{
+    font-size: 1.2em; padding-top: 20px;
+}
+
+.indexSec3P2Footer{
+	margin-top: 20px;
+	border: 1px solid #f2f2f2; 
+}
+
+.indexSec3P2Footer a{
+	text-decoration: none;
+	color: #f2f2f2; 
+	font-size: 1.5em; 
+	padding: 5px;
+}
+.indexSec3P2Footer:hover {
+    transform: scale(1.05, 1.05); /* Standard syntax */
+    -ms-transform: scale(1.05, 1.05); /* IE 9 */
+    -webkit-transform: scale(1.05, 1.05); /* Safari prior 9.0 */
+}/* Section-3 ends */
+
+/* Media Query (INDEX) Section-3 starts */
+@media only screen and (max-width: 1110px){
+    .indexSec3{
+        display: grid;
+        grid-template-columns: 1fr;
+        background-color: #f2f2f2;
+    }
+    .indexSec3P2Header{font-size: 1.5em;}
+    .indexSec3P2Body{font-size: 1em;}
+    .indexSec3P2Footer a{font-size: 1.2em;}
+}
+/* Media Query (INDEX) Section-3 ends */
+
+/* hideBtn for items starts */
+.hiddenBtn{
+    font-size: 20px;
+    font-weight: 900;
+    color: orange;
+    border-radius: 30%;
+    padding: 10px;
+    margin-top: 50px;
+    
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    
+}/* hideBtn for items ends */
+
+/* hidden Content starts */
+.hiddenCotent{
+    display: none;
+}/* hidden Content ends */
+
+/* footer starts */
+.lastFooter{
+    width: 100%; margin-top: 50px; padding: 25px 0 0px 0; 
+    border-top: 1px solid lightblue; 
+}
+
+.contactUs{
+    width: 100%; font-family: 'Cormorant Unicase';  
+    cursor: pointer;
+}
+
+.contactUs>h3{margin-bottom: 0px;}
+.contactContainer{width: 100%;}
+.contactIconContainer ul{
+    display: flex;
+    padding-bottom: 0px;
+}
+.contactIconContainer li{
+    width: 100%; height: 150px; 
+    padding: 0 30px 0 30px;
+    margin: 0;
+}
+.contactIconContainer ul:hover {
+    transform: scale(1.05, 1.05); /* Standard syntax */
+    -ms-transform: scale(1.05, 1.05); /* IE 9 */
+    -webkit-transform: scale(1.05, 1.05); /* Safari prior 9.0 */
+    
+}
+.contactIconContainer ul li > div {display: none;}
+.contactIcon1{width: 80px;}
+.contactIcon2{width: 55px; padding-top:15px; padding-bottom: 15px;}
+.contactIcon3{width: 65px; padding-top:10px; padding-bottom:10px;}
+
+.followUsFooter{width: 100%; font-family: 'Cormorant Unicase'; margin-bottom: 80px;}
+
+.contactUsDescription{
+    max-width: 100%; padding: 10px;
+    border: 1px solid grey;
+    position: absolute; left: 15%; right: 15%;
+    transform-origin: top;
+    transform: rotateX(-90deg);
+    cursor: text;
+
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+.socialMediaIconFooter{
+    -webkit-box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0); 
+    box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+    
+}
+.socialMediaFooter ul{display: flex;}
+.socialMediaFooter ul li{padding-top: 20px;}
+                .socialMediaIconFooter{ width: 50px; height: 50px; margin-left: 20px;}
+.socialMediaFooter ul li:hover {
+    transform: scale(1.5, 1.5); /* Standard syntax */
+    -ms-transform: scale(1.5, 1.5); /* IE 9 */
+    -webkit-transform: scale(1.5, 1.5); /* Safari prior 9.0 */
+}
+.footerFinal{
+    width: 100%;
+    background-color: #333;
+    padding: 5px 15px;
+    box-sizing: border-box;
+}/* footer ends */
+/* Media Query Footer starts*/
+@media only screen and (min-width:800px){
+    .contactUs,
+    .followUsFooter{
+        display: grid; justify-items: left; align-items: left;
+        padding: 30px;
+    }
+    .contactIconContainer,
+    .contactIconContainer ul{
+        width: 100%;
+        -webkit-box-shadow: none; 
+        box-shadow: none;
+    }
+    .contactIconContainer ul li{
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        text-align: left;
+    }
+    .contactIconContainer ul li > div{
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        text-align: left;
+        padding: 2px;
+    }
+
+    .socialMediaFooter ul li{padding: 20px;}
+}/* Media Query Footer ends */
